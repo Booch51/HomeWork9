@@ -11,5 +11,59 @@ public class Main {
             // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
             System.out.println("i = " + i);
         }
+        System.out.println("Задача 1");
+
+        int[] pay = new int[5];
+        pay[0] = 1200;
+        pay[1] = 120;
+        pay[2] = 115;
+        pay[3] = 190;
+        pay[4] = 170;
+
+        int totalPayments = 0;
+        for (int i = 0; i < pay.length; i++) {
+            totalPayments += pay[i];
+        }
+        System.out.println("Сумма трат за месяц составила " + totalPayments + " рублей.");
+
+        System.out.println("Задача 2");
+
+        int minPay = pay[0];
+        int maxPay = 0;
+        for (int i = 0; i < pay.length; i++) {
+            if (pay[i] > maxPay) {
+                maxPay = pay[i];
+            }
+            if (pay[i] <= minPay) {
+                minPay = pay[i];
+            }
+        }
+        System.out.println("Минимальная сумма трат за неделю составила " + minPay + " рублей.");
+        System.out.println("Максимальная сумма трат за неделю составила " + maxPay + " рублей.");
+
+        System.out.println("Задача 3");
+
+        double averagePay = totalPayments / pay.length;
+        System.out.println("Средняя сумма трат за месяц составила " + averagePay + " рублей.");
+
+        System.out.println("Задача 4");
+
+        char[] reverseFullName = { 'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
+
+        for (int i = 0; i < reverseFullName.length/2; i++) {
+            int leftI = i;
+            int rightI = reverseFullName.length - i - 1;
+
+            char tempI = reverseFullName[leftI];
+            reverseFullName[leftI] = reverseFullName[rightI];
+            reverseFullName [rightI] = tempI;
+        }
+        for (int i = 0; i < reverseFullName.length; i++) {
+            System.out.print(reverseFullName[i]);
+        }
+
+
+
+
     }
 }
