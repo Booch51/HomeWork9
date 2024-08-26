@@ -43,23 +43,17 @@ public class Main {
 
         System.out.println("Задача 3");
 
-        double averagePay = totalPayments / pay.length;
+        double averagePay = (double) totalPayments / pay.length;
         System.out.println("Средняя сумма трат за месяц составила " + averagePay + " рублей.");
 
         System.out.println("Задача 4");
 
         char[] reverseFullName = { 'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
 
-        for (int i = 0; i < reverseFullName.length/2; i++) {
-            int leftI = i;
-            int rightI = reverseFullName.length - i - 1;
-
-            char tempI = reverseFullName[leftI];
-            reverseFullName[leftI] = reverseFullName[rightI];
-            reverseFullName [rightI] = tempI;
-        }
-        for (int i = 0; i < reverseFullName.length; i++) {
-            System.out.print(reverseFullName[i]);
+        int index = reverseFullName.length - 1;
+        while (index >= 0) {
+            System.out.print(reverseFullName[index]);
+            index--;
         }
 
 
